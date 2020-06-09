@@ -8,7 +8,7 @@ As with regular requests, instead of calling `request.openWebsocket(handler)` an
 
 If creating the websocket handler is a side-effecting operation (and the handler is wrapped with an effects wrapper), the `openWebsocketF(handler)` can be used.
 
-After opening a websocket, a `sttp.client.ws.WebSocketResponse` instance is returned, wrapped in a backend-specific effects wrapper, such as `Future`, `IO`, `Task` or no wrapper for synchronous backends. If the protocol upgrade hasn't been successful, the request will fail with an error (represented as an exception or a failed effects wrapper).
+After opening a websocket, an `sttp.client.ws.WebSocketResponse` instance is returned, wrapped in a backend-specific effects wrapper, such as `Future`, `IO`, `Task` or no wrapper for synchronous backends. If the protocol upgrade hasn't been successful, the request will fail with an error (represented as an exception or a failed effects wrapper).
 
 In case of success, `WebSocketResponse` contains:
 
